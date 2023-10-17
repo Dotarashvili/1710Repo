@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/rmarequests" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmarequest_list"/>
+        </resources>
+    </route>
+    <route url="/V1/rmarequests/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmarequest_view"/>
+        </resources>
+    </route>
+    <route url="/V1/rmastatus/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getStatusById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmastatus_view"/>
+        </resources>
+    </route>
+    <route url="/V1/rmaresolution/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getResolutionById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmaresolution_view"/>
+        </resources>
+    </route>
+    <route url="/V1/rmacondition/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getConditionsById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmacondition_view"/>
+        </resources>
+    </route>
+    <route url="/V1/rmareason/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getReasonsById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmareason_view"/>
+        </resources>
+    </route>
+    <route url="/V1/rmareturn/:id" method="GET">
+        <service class="DevAll\RmaApi\Api\RmaRequestRepositoryInterface" method="getReturnAddressById"/>
+        <resources>
+            <resource ref="DevAll_RmaApi::rmareturn_view"/>
+        </resources>
+    </route>
+</routes>

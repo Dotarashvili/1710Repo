@@ -1,0 +1,21 @@
+<div class="short-modal">
+    <div class="modal-left">
+        <div class="modal-left-content">
+            <h3 class="left-header" data-bind="i18n: 'National Address, your geographical identity'"></h3>
+            <p data-bind="i18n: 'One step away from getting a seamless and guaranteed delivery experience Short address is a simple address created to make a unique address code that is easy to remember/memorize. It consists of 4 Letters and 4 Digits (represents your building number)'"></p>
+            <h3 data-bind="i18n: 'How can I know my short address?'"></h3>
+            <p data-bind="i18n: 'Through the app or the website of'"> <a href="https://splonline.com.sa/ar/" target="_blank" rel="noopener noreferrer" data-bind="i18n: 'SPLonline.com.sa'"></a></p>
+            <p data-bind="i18n: 'Via the chatbot number:'"> <a href="tel:+966 11 289 8888"> +966 11 289 8888</a></p>
+        </div>
+    </div>
+    <div class="modal-right">
+        <div class="modal-right-content">
+            <h2 data-bind="i18n: 'SHORT NATIONAL ADDRESS'"></h2>
+            <input id="short_address_input" class="input-text" type="text" placeholder="Short National Address" data-bind="attr: { placeholder: $t('Short National Address') }" required />
+            <div class="message_div" data-bind="i18n: 'Please enter short national address.'"></div>
+            <input id="unit_apartment_suite_input" class="input-text" type="text" placeholder="Unit/Apartment/Suite No." data-bind="attr: { placeholder: $t('Unit/Apartment/Suite No.') }" />
+            <button class="modal-confirm" data-bind="i18n: 'Confirm'"></button>
+        </div>
+        <button class="modal-close" data-bind="i18n: '×'"></button>
+    </div>
+</div>

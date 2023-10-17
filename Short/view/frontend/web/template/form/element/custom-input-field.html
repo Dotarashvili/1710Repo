@@ -1,0 +1,11 @@
+<button class="action primary" type="button"
+        data-bind="
+        click: openModal,
+        attr: {
+            id: uid,
+            disabled: disabled
+        },
+        i18n: 'Use My Short Address'
+        " name="button-short-address">
+</button>
+<span class="cancel-short-address" data-bind="click: cancelShortAddress, i18n: 'Cancel'"></span>

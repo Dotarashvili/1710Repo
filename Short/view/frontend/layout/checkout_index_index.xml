@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="custom-input-field" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">DevAll_Short/js/form/element/custom-input-field</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="customScope" xsi:type="string">shippingAddress.custom_attributes</item>
+                                                                        <item name="template" xsi:type="string">DevAll_Short/form/element/custom-input-field</item>
+                                                                    </item>
+                                                                    <item name="dataScope" xsi:type="string">shippingAddress.custom_attributes.custom_input_field</item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="visible" xsi:type="boolean">true</item>
+                                                                    <item name="sortOrder" xsi:type="string">100</item>
+                                                                    <item name="id" xsi:type="string">national_address</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

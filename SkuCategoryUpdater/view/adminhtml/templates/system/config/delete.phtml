@@ -1,0 +1,23 @@
+<?php
+/** @var DevAll\SkuCategoryUpdater\Block\Adminhtml\System\Config\DeleteButton $block */
+?>
+
+<?php if ($block->getRequest()->getParam('section') === 'generate_categories'): ?>
+    <button type="button" class="action-save delete-category-products" data-ui-id="delete-category-button" id="delete-category-button">
+        <span><?= /* @escapeNotVerified */ __('Delete Products') ?></span>
+    </button>
+    <div id="update_status_delete" class="delete-message"></div>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "DevAll_SkuCategoryUpdater/js/deleteButton": {
+                "button": "#delete-category-button",
+                "ajaxUrl": "<?= $block->getData('ajax_url') ?>",
+                "skuInput": "#generate_categories_input_fields_sku_input",
+                "categoryInput": "#generate_categories_input_fields_category_input",
+                "statusUpdate": "#update_status_delete"
+            }
+        }
+    }
+    </script>
+<?php endif; ?>

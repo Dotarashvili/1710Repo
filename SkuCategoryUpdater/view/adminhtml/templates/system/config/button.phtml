@@ -1,0 +1,23 @@
+<?php
+/** @var DevAll\SkuCategoryUpdater\Block\Adminhtml\System\Config\Button $block */
+?>
+
+<?php if ($block->getRequest()->getParam('section') === 'generate_categories'): ?>
+    <button type="button" class="action-save add-category-products" data-ui-id="generate-categories-button" id="generate_categories_button">
+        <span><?= /* @escapeNotVerified */ __('Add Products') ?></span>
+    </button>
+    <div id="update_status_add" class="add-message"></div>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "DevAll_SkuCategoryUpdater/js/addButton": {
+                "button": "#generate_categories_button",
+                "statusUpdate": "#update_status_add",
+                "skuInput": "#generate_categories_input_fields_sku_input",
+                "categoryInput": "#generate_categories_input_fields_category_input",
+                "ajaxUrl": "<?= $block->getData('ajax_url') ?>"
+            }
+        }
+    }
+    </script>
+<?php endif; ?>

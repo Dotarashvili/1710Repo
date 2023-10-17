@@ -1,0 +1,35 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="generate_categories" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Assign New Categories To Products</label>
+            <tab>devall</tab>
+            <resource>Devall_SkuCategoryUpdater::config_devall</resource>
+            <group id="input_fields" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Input Fields</label>
+                <field id="separator_select" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select SKU separator</label>
+                    <source_model>DevAll\SkuCategoryUpdater\Model\Config\Source\Separator</source_model>
+                    <comment><![CDATA[Choose the separator for the SKU input]]></comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="sku_input" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input SKUs</label>
+                    <comment><![CDATA[Input SKUs separated by <br/> 1) New line. Example:<br/>SKU1<br/>SKU2<br/>SKU3 <br/><br/> 2) Or by Commas. Example:<br/>SKU1,SKU2,SKU3]]>
+                    </comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="category_input" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Category</label>
+                    <comment><![CDATA[Input the category name.<br/> Format: Woman or Woman/Clothing]]></comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="addbutton" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>DevAll\SkuCategoryUpdater\Block\Adminhtml\System\Config\Button</frontend_model>
+                </field>
+                <field id="deletebutton" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>DevAll\SkuCategoryUpdater\Block\Adminhtml\System\Config\DeleteButton</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

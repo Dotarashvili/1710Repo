@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="DevAll_SkuCategoryUpdater::assign_new_categories"
+             title="Assign New Categories To Products"
+             module="DevAll_SkuCategoryUpdater"
+             sortOrder="10"
+             parent="DevAll_Core::core"
+             action="adminhtml/system_config/edit/section/generate_categories"
+             resource="Magento_Backend::admin"
+        />
+    </menu>
+</config>
